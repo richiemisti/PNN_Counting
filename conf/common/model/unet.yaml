@@ -1,0 +1,8 @@
+# @package model
+
+defaults:
+  - common
+
+name: UNet
+module:
+  _target_: models.UNet

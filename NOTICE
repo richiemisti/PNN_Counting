@@ -1,0 +1,21 @@
+NOTICE
+
+This repository includes and modifies code originally from:
+
+- Lupori et al. (2023), counting_perineuronal_nets
+  https://github.com/ciampluca/counting_perineuronal_nets
+  Licensed under the Apache License, Version 2.0
+
+Modifications to this repository were made by:
+
+- Richie Mistichelli (2025), University of Notre Dame
+  - Developed: structure.py, run_pipeline.py, colocalization.py
+  - Integrated deep learning detection, folder automation, and visualization tools
+
+- Ismary Blanco
+  - Provided design and conceptual guidance on the analysis pipeline
+
+- Florencia Martinez Addiego
+  - Developed: Calculate Intensities of PNNs_Clean.ipynb, draw_and_measure.py, rolling_ball.py
+
+All modifications are released under the same Apache License, Version 2.0.
