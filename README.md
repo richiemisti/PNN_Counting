@@ -51,9 +51,8 @@ License
 -------
 This project remains under the terms of the original **Apache License 2.0**, as provided in the Lupori et al. repository. All modifications and new contributions are also distributed under the same license. See `LICENSE` for full details.
 
-======================================
 Getting Started: Setup Instructions
-======================================
+-------
 
 IMPORTANT: Download the Deep Learning Models
 -------------------------------------
@@ -73,9 +72,9 @@ IMPORTANT: Folder Naming Rules
 - These names MUST be exact or the pipeline will skip them.
 - Each mouse should be in its own folder (e.g., `Mouse_4371-4`) and contain slice images (`1L.tif`, `1R.tif`, etc.)
 
-=============================
+
 Environment Setup (One Time)
-=============================
+================
 
 1. Install Miniconda:  
    https://www.anaconda.com/docs/getting-started/miniconda/main  
@@ -116,9 +115,9 @@ Environment Setup (One Time)
    pip install -r requirements.txt
    ```
 
-==============================
+
 Image Preprocessing (ImageJ)
-==============================
+=========
 
 Use ImageJ to:
 - Convert Z-stacks → SUM projections
@@ -127,6 +126,7 @@ Use ImageJ to:
 - Ensure consistent naming: `Mouse_XXXX/1L.tif`, `2L.tif`, etc.
 - Names must match across channels for proper analysis
 
+```javascript
 // === start of macro ===
 // This ImageJ macro automates preprocessing of .czi confocal image files. It allows the user to select a parent folder and then either one or all subfolders to process. For each valid .czi file that includes a left or right hemisphere designation, it performs a SUM Z-projection, applies grayscale and 8-bit conversion, and then saves two TIFF images with standardized names for hippocampus and CA1 regions. This prepares the data for downstream PNN and PV detection workflows.
 // Choose parent folder, optionally pick ONE subfolder or ALL.
@@ -231,7 +231,7 @@ function processFolder(mouseDir) {
     }
 }
 
-==============================
+
 Folder Restructuring
 ==============================
 
@@ -302,7 +302,6 @@ PNN_Counting/
 │       └── IB60_SUM_CA1_1L_PV/
 │           └── IB60_SUM_CA1_1L_PV.tif
 
-==============================
 Running the Pipeline
 ==============================
 
@@ -336,7 +335,6 @@ run_pipeline.py Output per Section Folder:
 
    - Generates raw match files, plots, distance histograms, summary stats
 
-==============================================
 Colocalization with colocalization.py
 ==============================================
 
@@ -402,7 +400,6 @@ Best Practices
 
 For any issues or clarification, please contact the pipeline maintainer
 
-==================================================================
 Interactive Walkthrough for Colocalization.py (Recommended Inputs)
 ==================================================================
 
@@ -526,14 +523,14 @@ Includes:
 - Image overlays (if enabled)
 - Run metadata and logs
 
-==============================
-PNN Intensity Quantification
+PNN Intensity Quantification - Credit: Florencia Martinez Addiego
 ==============================
 
-1. Open:
+1. Developed by Florencia Martinez Addiego, open:
    ```
    Calculate Intensities of PNNs_Clean.ipynb
    ```
+
 
 2. Run cells top to bottom using VS Code Jupyter notebook support.
 
@@ -553,7 +550,6 @@ PNN Intensity Quantification
 
 5. Run remaining cells — intensity and binned results will be saved.
 
-==============================
 Questions?
 ==============================
 
