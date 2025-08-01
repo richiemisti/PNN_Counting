@@ -230,7 +230,7 @@ function processFolder(mouseDir) {
         close();
     }
 }
-
+```
 
 Folder Restructuring
 ==============================
